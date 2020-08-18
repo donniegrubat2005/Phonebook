@@ -2881,12 +2881,11 @@ __webpack_require__.r(__webpack_exports__);
     changePassword: function changePassword() {
       var _this = this;
 
-      var uri = "/api/auth/users" + this.$route.params.id;
+      var uri = "/api/auth/users/" + this.$route.params.id;
       axios.patch(uri, this.user).then(function (response) {
         _this.user = response.data;
-        console.log(response.data);
 
-        _this.$toastr.success("Updated Successfully!", "Updated!");
+        _this.$toastr.success("Change Password Successfully!", "Updated!");
 
         _this.returntoList();
       })["catch"](function (error) {
@@ -3099,6 +3098,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -70793,7 +70794,13 @@ var render = function() {
                           staticClass:
                             "mr-2 d-none d-lg-inline text-gray-600 small"
                         },
-                        [_vm._v("Donnie Grubat")]
+                        [
+                          _vm._v(
+                            _vm._s(_vm.currentUser.first_name) +
+                              " " +
+                              _vm._s(_vm.currentUser.last_name)
+                          )
+                        ]
                       ),
                       _vm._v(" "),
                       _c("img", {
@@ -70811,11 +70818,24 @@ var render = function() {
                       attrs: { "aria-labelledby": "userDropdown" }
                     },
                     [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "dropdown-item",
+                          attrs: { to: "/profile/list" }
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "fas fa-user fa-sm fa-fw mr-2 text-gray-400"
+                          }),
+                          _vm._v("\n                Profile\n              ")
+                        ]
+                      ),
+                      _vm._v(" "),
                       _vm._m(7),
                       _vm._v(" "),
                       _vm._m(8),
-                      _vm._v(" "),
-                      _vm._m(9),
                       _vm._v(" "),
                       _c("div", { staticClass: "dropdown-divider" }),
                       _vm._v(" "),
@@ -70843,7 +70863,8 @@ var render = function() {
                           _vm._v("\n                Logout\n              ")
                         ]
                       )
-                    ]
+                    ],
+                    1
                   )
                 ])
               ])
@@ -70855,7 +70876,7 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(10)
+        _vm._m(9)
       ]
     )
   ])
@@ -71289,15 +71310,6 @@ var staticRenderFns = [
           )
         ]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-      _c("i", { staticClass: "fas fa-user fa-sm fa-fw mr-2 text-gray-400" }),
-      _vm._v("\n                Profile\n              ")
     ])
   },
   function() {

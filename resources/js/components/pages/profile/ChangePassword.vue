@@ -58,13 +58,12 @@ export default {
   },
   methods: {
     changePassword() {
-      let uri = "/api/auth/users" + this.$route.params.id;
+      let uri = "/api/auth/users/" + this.$route.params.id;
       axios
         .patch(uri, this.user)
         .then((response) => {
           this.user = response.data;
-          console.log(response.data);
-          this.$toastr.success("Updated Successfully!", "Updated!");
+          this.$toastr.success("Change Password Successfully!", "Updated!");
           this.returntoList();
         })
         .catch((error) => {
