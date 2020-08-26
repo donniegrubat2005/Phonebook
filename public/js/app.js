@@ -2008,24 +2008,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "login",
@@ -2047,7 +2029,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.$store.commit("loginSuccess", res);
 
         _this.$router.push({
-          name: "home"
+          name: "dashboard"
         });
       })["catch"](function (error) {
         _this.$store.commit("loginFailed", {
@@ -2078,28 +2060,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2737,8 +2697,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -69078,11 +69036,7 @@ var render = function() {
                           staticClass: "btn btn-primary btn-user btn-block",
                           attrs: { type: "submit" }
                         },
-                        [
-                          _vm._v(
-                            "\n                                        Login\n                                    "
-                          )
-                        ]
+                        [_vm._v("Login")]
                       )
                     ]
                   ),
@@ -69119,9 +69073,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center" }, [
       _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
-        _vm._v(
-          "\n                                        Welcome Back!\n                                    "
-        )
+        _vm._v("Welcome Back!")
       ])
     ])
   },
@@ -69215,9 +69167,7 @@ var render = function() {
                       _vm._v(" "),
                       _vm.submitted && !_vm.$v.user.first_name.required
                         ? _c("div", { staticClass: "errors" }, [
-                            _vm._v(
-                              "\n                                        First Name is required\n                                    "
-                            )
+                            _vm._v("First Name is required")
                           ])
                         : _vm._e()
                     ]),
@@ -69251,9 +69201,7 @@ var render = function() {
                       _vm._v(" "),
                       _vm.submitted && !_vm.$v.user.last_name.required
                         ? _c("div", { staticClass: "errors" }, [
-                            _vm._v(
-                              "\n                                        Last Name is required\n                                    "
-                            )
+                            _vm._v("Last Name is required")
                           ])
                         : _vm._e()
                     ])
@@ -69340,7 +69288,7 @@ var render = function() {
                             !_vm.$v.user.password.minLength
                               ? _c("span", [
                                   _vm._v(
-                                    "Password must be at least 3\n                                            characters"
+                                    "\n                      Password must be at least 3\n                      characters\n                    "
                                   )
                                 ])
                               : _vm._e()
@@ -69384,7 +69332,7 @@ var render = function() {
                             !_vm.$v.user.password_confirmation.required
                               ? _c("span", [
                                   _vm._v(
-                                    "Confirm Password is\n                                            required"
+                                    "\n                      Confirm Password is\n                      required\n                    "
                                   )
                                 ])
                               : !_vm.$v.user.password_confirmation
@@ -69402,11 +69350,7 @@ var render = function() {
                       staticClass: "btn btn-primary btn-user btn-block",
                       attrs: { type: "submit" }
                     },
-                    [
-                      _vm._v(
-                        "\n                                Register Account\n                            "
-                      )
-                    ]
+                    [_vm._v("Register Account")]
                   )
                 ]
               ),
@@ -69424,7 +69368,7 @@ var render = function() {
                     { staticClass: "small", attrs: { to: "/", href: "#" } },
                     [
                       _vm._v(
-                        "Already have an account?\n                                Login!"
+                        "\n                Already have an account?\n                Login!\n              "
                       )
                     ]
                   )
@@ -69445,9 +69389,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center" }, [
       _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
-        _vm._v(
-          "\n                                Create an Account!\n                            "
-        )
+        _vm._v("Create an Account!")
       ])
     ])
   },
@@ -70176,87 +70118,103 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-xl-3 col-md-6 mb-4" }, [
+      _c("div", { staticClass: "card border-left-primary shadow h-100 py-2" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "row no-gutters align-items-center" }, [
+            _c("div", { staticClass: "col mr-2" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "h6 mb-0 font-weight-bold text-gray-800" },
+                [
+                  _vm._v(
+                    "\n              This is contact page\n              "
+                  ),
+                  _c("router-link", { attrs: { to: "/contacts/list" } }, [
+                    _vm._v("Contact")
+                  ])
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(1)
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "col-xl-3 col-md-6 mb-4" }, [
+      _c("div", { staticClass: "card border-left-primary shadow h-100 py-2" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "row no-gutters align-items-center" }, [
+            _c("div", { staticClass: "col mr-2" }, [
+              _vm._m(2),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "h6 mb-0 font-weight-bold text-gray-800" },
+                [
+                  _vm._v(
+                    "\n              This is profile page\n              "
+                  ),
+                  _c("router-link", { attrs: { to: "/profile/list" } }, [
+                    _vm._v("Profile")
+                  ])
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(3)
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-xl-3 col-md-6 mb-4" }, [
-        _c(
-          "div",
-          { staticClass: "card border-left-primary shadow h-100 py-2" },
-          [
-            _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "row no-gutters align-items-center" }, [
-                _c("div", { staticClass: "col mr-2" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "text-xs font-weight-bold text-primary text-uppercase mb-1"
-                    },
-                    [_c("h5", [_vm._v("Contacts")])]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "h6 mb-0 font-weight-bold text-gray-800" },
-                    [
-                      _vm._v(
-                        "\n                            This is contact page\n                        "
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-auto" }, [
-                  _c("i", { staticClass: "fas fa-list fa-2x text-gray-300" })
-                ])
-              ])
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-xl-3 col-md-6 mb-4" }, [
-        _c(
-          "div",
-          { staticClass: "card border-left-primary shadow h-100 py-2" },
-          [
-            _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "row no-gutters align-items-center" }, [
-                _c("div", { staticClass: "col mr-2" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "text-xs font-weight-bold text-primary text-uppercase mb-1"
-                    },
-                    [_c("h5", [_vm._v("Profile")])]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "h6 mb-0 font-weight-bold text-gray-800" },
-                    [
-                      _vm._v(
-                        "\n                            This is profile page\n                        "
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-auto" }, [
-                  _c("i", { staticClass: "fas fa-user fa-2x text-gray-300" })
-                ])
-              ])
-            ])
-          ]
-        )
-      ])
+    return _c(
+      "div",
+      {
+        staticClass: "text-xs font-weight-bold text-primary text-uppercase mb-1"
+      },
+      [_c("h5", [_vm._v("Contacts")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-auto" }, [
+      _c("i", { staticClass: "fas fa-list fa-2x text-gray-300" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "text-xs font-weight-bold text-primary text-uppercase mb-1"
+      },
+      [_c("h5", [_vm._v("Profile")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-auto" }, [
+      _c("i", { staticClass: "fas fa-user fa-2x text-gray-300" })
     ])
   }
 ]
