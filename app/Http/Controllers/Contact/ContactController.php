@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Contact;
 
 use App\Http\Controllers\Controller;
+use App\Models\Address;
+use App\Models\Contact;
 use App\Repositories\Contact\ContactInterface;
 use Illuminate\Http\Request;
 
@@ -10,6 +12,7 @@ class ContactController extends Controller
 {
 
     protected $contactRepo;
+
 
     public function __construct(ContactInterface $contact)
     {
@@ -30,8 +33,7 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        $this->contactRepo->create($request->all());
-        return response()->json('successfully added!');
+        return $this->contactRepo->create($request->all());
     }
 
 

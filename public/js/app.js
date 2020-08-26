@@ -2428,6 +2428,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2570,7 +2572,8 @@ __webpack_require__.r(__webpack_exports__);
         first_name: "",
         last_name: "",
         gender: "",
-        date_of_birth: ""
+        date_of_birth: "",
+        address: ""
       },
       error: {}
     };
@@ -3098,9 +3101,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
 //
 //
 //
@@ -69568,6 +69568,8 @@ var render = function() {
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(contact.date_of_birth))]),
                           _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(contact.address))]),
+                          _vm._v(" "),
                           _c("td", [
                             _c(
                               "span",
@@ -69663,6 +69665,8 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Gender")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Date of Birth")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Address")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col", width: "90px" } }, [
           _vm._v("Actions")
@@ -69862,6 +69866,32 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "address" } }, [_vm._v("Address")]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.contact.address,
+                      expression: "contact.address"
+                    }
+                  ],
+                  staticClass: "form-control rounded-0",
+                  attrs: { name: "address", rows: "4" },
+                  domProps: { value: _vm.contact.address },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.contact, "address", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
               _c(
                 "button",
                 {
@@ -69875,11 +69905,7 @@ var render = function() {
                     }
                   }
                 },
-                [
-                  _vm._v(
-                    "\n                            Save\n                        "
-                  )
-                ]
+                [_vm._v("Save")]
               )
             ])
           ])
@@ -70080,6 +70106,32 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "address" } }, [_vm._v("Address")]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.contact.address,
+                      expression: "contact.address"
+                    }
+                  ],
+                  staticClass: "form-control rounded-0",
+                  attrs: { name: "address", rows: "4" },
+                  domProps: { value: _vm.contact.address },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.contact, "address", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
               _c(
                 "button",
                 {
@@ -70093,11 +70145,7 @@ var render = function() {
                     }
                   }
                 },
-                [
-                  _vm._v(
-                    "\n                            Save\n                        "
-                  )
-                ]
+                [_vm._v("Save")]
               )
             ])
           ])
@@ -70835,8 +70883,6 @@ var render = function() {
                       _vm._v(" "),
                       _vm._m(7),
                       _vm._v(" "),
-                      _vm._m(8),
-                      _vm._v(" "),
                       _c("div", { staticClass: "dropdown-divider" }),
                       _vm._v(" "),
                       _c(
@@ -70876,7 +70922,7 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(9)
+        _vm._m(8)
       ]
     )
   ])
@@ -71310,15 +71356,6 @@ var staticRenderFns = [
           )
         ]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-      _c("i", { staticClass: "fas fa-cogs fa-sm fa-fw mr-2 text-gray-400" }),
-      _vm._v("\n                Settings\n              ")
     ])
   },
   function() {
@@ -95906,8 +95943,8 @@ var user = Object(_auth_auth__WEBPACK_IMPORTED_MODULE_0__["getLocalUser"])();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Projects\Laravel\phonebook\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Projects\Laravel\phonebook\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Projects\Laravel\Vue\phonebook\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Projects\Laravel\Vue\phonebook\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

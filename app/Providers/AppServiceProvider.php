@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\Address\AddressInterface;
+use App\Repositories\Address\AddressRepository;
 use App\Repositories\Contact\ContactInterface;
 use App\Repositories\Contact\ContactRepository;
 use App\Repositories\User\UserInterface;

@@ -19,6 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('last_name');
             $table->string('gender');
             $table->date('date_of_birth');
+            $table->text('address');
             $table->timestamps();
         });
     }

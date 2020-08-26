@@ -26,6 +26,7 @@
                     <th scope="col">Last Name</th>
                     <th scope="col">Gender</th>
                     <th scope="col">Date of Birth</th>
+                    <th scope="col">Address</th>
                     <th scope="col" width="90px">Actions</th>
                   </tr>
                 </thead>
@@ -36,6 +37,7 @@
                     <td>{{ contact.last_name }}</td>
                     <td>{{ contact.gender }}</td>
                     <td>{{ contact.date_of_birth }}</td>
+                    <td>{{ contact.address }}</td>
                     <td>
                       <span>
                         <router-link
